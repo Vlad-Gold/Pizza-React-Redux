@@ -1,0 +1,51 @@
+.header {
+  &__logo {
+    display: flex;
+    img {
+      margin-right: 17px;
+    }
+  }
+  &__basket {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: #fe5f1e;
+    border-radius: 30px;
+    color: #0806068c;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    &_price {
+        margin-right: 13px;
+        margin-left: 23px;
+    }
+    &_img {
+      max-width: 14.67px;
+      margin-right: 8px;
+    }
+    &_devider {
+        width: 1px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.25);
+        margin-right: 13px;
+    }
+    &_qty{
+        margin-right: 19px;
+    }
+  }
+}
+
+.container {
+  padding-top: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1115px;
+  margin: 0 auto;
+}
+
+
+
