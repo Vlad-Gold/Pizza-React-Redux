@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/header/header';
 import Menu from './components/menu/menu';
+import Content from './components/content/content';
 
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
         <>
             <Header/>
             <Menu/>
+            <Content/>
         </> 
      );
 }

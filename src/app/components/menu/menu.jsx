@@ -7,9 +7,9 @@ const Menu = () => {
     <menu>
       <div className="container">
         <div className={style.menu__devider}></div>
-        <div className="menu__container">
+        <div className={style.menu__container}>
           <ul className={style.menu__list}>
-            <li className={style.menu__list_item}>Все</li>
+            <li className={`${style.menu__list_item} ${style.active}`}>Все</li>
             <li className={style.menu__list_item}>Мясные</li>
             <li className={style.menu__list_item}>Вегетарианская</li>
             <li className={style.menu__list_item}>Гриль</li>
@@ -17,9 +17,9 @@ const Menu = () => {
             <li className={style.menu__list_item}>Закрытые</li>
           </ul>
           <div className={style.menu__sort}>
-            <img src={sort_element} alt="" className="menu__sort_element" />
+            <img src={sort_element} alt="sort_element" className={style.menu__sort_element} />
             <span>Сортировка по:</span>
-            <ul className="menu__sort_select">
+            <ul className={style.menu__sort_select}>
               <li>популярности</li>
               {/* <li>по цене</li>
                         <li>по алфавиту</li> */}

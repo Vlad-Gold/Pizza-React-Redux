@@ -11,7 +11,7 @@ const Header = () => {
             <img src={logo} alt="logo" />
             <div>
                 <h1>Voronej PIZZA</h1>
-                <p>самая вкусная пицца во вселенной</p>
+                <p>Cамая вкусная пицца в Воронежской области </p>
             </div>
            </div>
            <div className={style.header__basket}>
