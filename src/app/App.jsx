@@ -1,14 +1,22 @@
 import React from 'react';
 import Header from './components/header/header';
-import Menu from './components/menu/menu';
+import Categories from './components/categories/categories';
 import Content from './components/content/content';
+import SortPopup from './components/sort/SortPopup';
+import style from './app.module.scss'
+
+
 
 
 const App = () => {
     return ( 
         <>
             <Header/>
-            <Menu/>
+            <div className={style.container}>
+            <Categories items={["Мясные", "Веганская", "Гриль", "Острые", "Закрытые"]}/>
+            <SortPopup/>
+            </div>
+            
             <Content/>
         </> 
      );

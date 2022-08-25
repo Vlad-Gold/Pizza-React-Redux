@@ -21,6 +21,7 @@ const Header = () => {
             <span className={style.header__basket_qty}>3</span>
            </div>
         </div>
+        <div className={style.header__devider}></div>
     </header>
     );
 }
