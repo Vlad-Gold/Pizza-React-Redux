@@ -2,6 +2,7 @@ import React from 'react';
 import style from './_header.module.scss'
 import logo from '../../../images/logo/logo.png'
 import basket from '../../../images/icons/basket.svg'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -10,16 +11,19 @@ const Header = () => {
            <div className={style.header__logo}>
             <img src={logo} alt="logo" />
             <div>
-                <h1>Voronej PIZZA</h1>
+                <Link to = "/"><h1>Voronej PIZZA</h1></Link>
+                
                 <p>Cамая вкусная пицца в Воронежской области </p>
             </div>
            </div>
+           <Link to = "/cart">
            <div className={style.header__basket}>
             <span className={style.header__basket_price}> 520 ₽</span>
             <span className={style.header__basket_devider}></span>
             <img className={style.header__basket_img} src= {basket} alt="basket_img" />
             <span className={style.header__basket_qty}>3</span>
            </div>
+           </Link>
         </div>
         <div className={style.header__devider}></div>
     </header>
