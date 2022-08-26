@@ -14,7 +14,7 @@ const App = () => {
             <Header/>
             <div className={style.container}>
             <Categories items={["Мясные", "Веганская", "Гриль", "Острые", "Закрытые"]}/>
-            <SortPopup/>
+            <SortPopup items ={["популярности", "цене", "алфавиту"] }/>
             </div>
             
             <Content/>
