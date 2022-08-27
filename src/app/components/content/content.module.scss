@@ -1,3 +1,8 @@
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
 h2 {
     margin-top: 32px;
         font-style: normal;
@@ -9,9 +14,9 @@ h2 {
     }
 
     .content {
-        
        display: flex;
        align-items: center;
-       justify-content: space-between;
+    //    justify-content: space-around;
+       flex-wrap: wrap;
     }
 
