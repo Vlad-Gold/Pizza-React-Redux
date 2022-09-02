@@ -11,7 +11,7 @@ const Content = ({ items }) => {
       <div className={style.container}>
         <h2>Все пиццы</h2>
         <div className={style.content}>
-          {items.map((obj) => (
+          { items && items.map((obj) => (
             <Pizza key={obj.id} {...obj} />
           ))}
         </div>
