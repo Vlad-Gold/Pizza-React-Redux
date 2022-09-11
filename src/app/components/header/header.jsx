@@ -3,8 +3,20 @@ import style from './_header.module.scss'
 import logo from '../../../images/logo/logo.png'
 import basket from '../../../images/icons/basket.svg'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+
+    // для cart, useSelector дает из редакса cart и вытаскивает из него totalPrice, totalCount
+
+    // const {totalPrice, totalCount} = useSelector(({cart}) => ({
+    //     totalPrice: cart.totalPrice,
+    //     totalCount: cart.totalCount
+    // }));
+    // console.log(totalPrice);
+    
+    // const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
+
     return (
          <header>
         <div className={style.container}>
@@ -18,10 +30,10 @@ const Header = () => {
            </div>
            <Link to = "/cart">
            <div className={style.header__basket}>
-            <span className={style.header__basket_price}> 520 ₽</span>
+            <span className={style.header__basket_price}> 1 ₽</span>
             <span className={style.header__basket_devider}></span>
             <img className={style.header__basket_img} src= {basket} alt="basket_img" />
-            <span className={style.header__basket_qty}>3</span>
+            <span className={style.header__basket_qty}>2</span>
            </div>
            </Link>
         </div>

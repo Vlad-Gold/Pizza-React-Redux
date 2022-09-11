@@ -1,30 +1,12 @@
-import React, { useEffect } from "react";
-import Home from "./pages/home";
+import React, {  } from "react";
+import Home from "./pages/home/home";
 import { Route, Routes } from "react-router-dom";
-import Cart from "./pages/cart";
+import Cart from "./pages/cart/cart";
 import Header from "./components/header/header";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setPizzas } from "./redux/actions/pizzas";
+
+
 
 const App = () => {
-  const dispatch = useDispatch();
-
-  // console.log(state);
-
-  // У нас есть база данных в папке Public, получаем JSON с помощью axios
-  // Redux: нужно перекинуть полученное в редакс setPizzas action
-  // когда происходит первый рендер, на сервер отправляется гет запрос
-  // дождись ответа и вызови dispatch
-  useEffect(() => {
-    axios.get("http://localhost:3000/db.json").then(({ data }) => {
-      dispatch(setPizzas(data.pizzas));
-      console.log(setPizzas(data.pizzas));
-    });
-  }, []);
-
- 
-
   return (
     <>
       <Header />

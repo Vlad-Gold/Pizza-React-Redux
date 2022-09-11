@@ -4,7 +4,11 @@ import classNames from 'classnames'
 import { PropTypes } from 'prop-types'; 
 
 
+
+
 const Pizza = ({name, imageUrl, price, types, sizes}) => {
+
+
   const availableTypes = ['тонкое', 'традиционное'];
   const availableSizes = [26, 30, 40];
   const [activeType, setActiveType] = useState(0);
@@ -17,7 +21,6 @@ const Pizza = ({name, imageUrl, price, types, sizes}) => {
   const onSelectSize = (index) => {
     setActiveSize(index);
   };
-
 
 
 
@@ -68,6 +71,7 @@ Pizza.propTypes = {
   price: PropTypes.number,
   types: PropTypes.arrayOf(PropTypes.number),
   sizes: PropTypes.arrayOf(PropTypes.number),
+
 }
 
 Pizza.defaultProps = {
@@ -75,6 +79,7 @@ Pizza.defaultProps = {
   price: 0,
   types: [],
   sizes: [],
+
 };
 
 export default Pizza;
