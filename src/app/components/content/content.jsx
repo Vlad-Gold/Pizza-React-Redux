@@ -10,8 +10,9 @@ const Content = ({ items }) => {
 // const isLoaded = useSelector(({pizzas}) => pizzas.isLoaded);
 const isLoaded = useSelector((state) => state.default.pizzas.isLoaded)
 
-// const cartItems = useSelector(({ cart }) => cart.items);
-// console.log(cartItems)
+const cartItems = useSelector((state) => state.default.cart.items);
+
+console.log(cartItems)
 
 const handleAddPizzaToCart = (obj) => {
   dispatch({
@@ -26,7 +27,7 @@ const handleAddPizzaToCart = (obj) => {
         <h2>Все пиццы</h2>
         <div className={style.content}>
           { isLoaded ? (items.map((obj) => 
-            <Pizza key={obj.id} isLoading = {true} {...obj} onClickAddPizza={handleAddPizzaToCart} />) ) : 
+            <Pizza key={obj.id} isLoading = {true} {...obj} onClickAddPizza={handleAddPizzaToCart}  addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}/>) ) : 
 
             Array(12).fill(0).map((_, index) => <PizzaLoading key={index}/>)} 
     
